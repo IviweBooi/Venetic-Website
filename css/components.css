@@ -244,6 +244,7 @@ nav {
   font-weight: 500;
   font-family: var(--font-primary);
   margin: 0 auto;
+  border: none; /* Explicitly remove any borders */
 }
 
 /* ================== Scrolling Ticker ================== */
@@ -356,6 +357,7 @@ nav {
     width: 90%;
     bottom: 40px; /* Moved up to stay inside hero on mobile */
   }
+
 }
 
 @media (max-width: 480px) {
