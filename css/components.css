@@ -95,6 +95,133 @@ nav {
   background-color: var(--color-button-bg);
 }
 
+/* ================== Navbar ================== */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2000;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-white);
+  position: relative;
+  transition: background-color var(--transition-fast);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: all var(--transition-fast);
+}
+
+.hamburger::before { top: -8px; left: 0; }
+.hamburger::after { top: 8px; left: 0; }
+
+/* Hamburger to X Animation */
+.menu-toggle.active .hamburger {
+  background-color: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-toggle.active .hamburger::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* ================== Mobile Nav Overlay ================== */
+
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-black);
+  z-index: 1500;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.mobile-nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+.mobile-nav-links li {
+  margin-bottom: var(--space-lg);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.mobile-nav-overlay.active .mobile-nav-links li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation for links */
+.mobile-nav-overlay.active li:nth-child(1) { transition-delay: 0.1s; }
+.mobile-nav-overlay.active li:nth-child(2) { transition-delay: 0.15s; }
+.mobile-nav-overlay.active li:nth-child(3) { transition-delay: 0.2s; }
+.mobile-nav-overlay.active li:nth-child(4) { transition-delay: 0.25s; }
+.mobile-nav-overlay.active li:nth-child(5) { transition-delay: 0.3s; }
+.mobile-nav-overlay.active li:nth-child(6) { transition-delay: 0.35s; }
+.mobile-nav-overlay.active li:nth-child(7) { transition-delay: 0.4s; }
+.mobile-nav-overlay.active li:nth-child(8) { transition-delay: 0.45s; }
+
+.mobile-nav-links a {
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.mobile-cta {
+  margin-top: var(--space-xl);
+  width: 100%;
+  padding: 0 var(--space-xl);
+}
+
+.mobile-cta .btn {
+  font-size: 1rem;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  color: var(--color-button-text);
+  font-weight: 500;
+  font-family: var(--font-primary);
+}
+
 /* ================== Scrolling Ticker ================== */
 
 .ticker-container {
@@ -141,6 +268,88 @@ nav {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* ================== Responsive Media Queries ================== */
+
+@media (max-width: 1024px) {
+  :root {
+    --space-xl: 24px;
+  }
+  
+  .nav-container {
+    padding: 0 var(--space-md);
+  }
+
+  .nav-links li {
+    padding: 0 var(--space-sm);
+  }
+
+  .nav-links a {
+    letter-spacing: 1px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 70px;
+  }
+
+  nav {
+    padding: 0 var(--space-md);
+  }
+
+  .nav-links, .nav-cta {
+    display: none; /* Hide desktop links and CTA */
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .ticker-container {
+    width: 90%;
+    bottom: 40px; /* Moved up to stay inside hero on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    padding: 0 var(--space-md);
+  }
+
+  .ticker-container {
+    width: 100%;
+    bottom: 50px; /* Moved up slightly more for very small screens */
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 10px;
+    justify-content: center;
   }
 }
 

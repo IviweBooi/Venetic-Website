@@ -3,22 +3,34 @@
 .hero {
   height: calc(100vh - 60px);
   width: 100%;
-  background-image: url('/images/backgrounds/bg-image2.png');
+  background-color: var(--color-black);
+  background-image: url('../../images/backgrounds/bg-image2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   text-align: center;
   color: var(--color-white);
-  padding: var(--nav-height);
+  padding: 0 var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('../../images/backgrounds/bg-image-mobile.png');
+    background-position: center center;
+    background-size: cover;
+  }
 }
 
 .hero-content {
   max-width: 800px;
   padding: 0 var(--space-xl);
-    margin-bottom: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-aligns the button and text horizontally */
+  justify-content: center;
 }
 
 
@@ -28,6 +40,7 @@
   font-size: var(--font-md);
   text-transform: uppercase;
   font-weight: 400;
+  margin-top: 345px;
 }
 
 .btn-primary:hover {

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Venetic Boards & Interiors</title>
+    <!-- Preload Hero Image for faster loading -->
+    <link rel="preload" as="image" href="images/backgrounds/bg-image2.png" />
     <!-- import styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -36,8 +38,32 @@
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
+
+        <!-- Hamburger Menu Icon -->
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
       </div>
     </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+      <ul class="mobile-nav-links">
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Process</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="mobile-cta">
+          <a href="#" class="btn btn-primary">
+            Get a Quote
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <header class="hero">
       <div class="hero-content">
@@ -77,5 +103,27 @@
         </div>
       </div>
     </header>
-  </body>
+
+      <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav-overlay');
+        const body = document.body;
+
+        menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active');
+          mobileNav.classList.toggle('active');
+          body.classList.toggle('menu-open');
+        });
+
+        // Close menu when clicking a link
+        const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            mobileNav.classList.remove('active');
+            body.classList.remove('menu-open');
+          });
+        });
+      </script>
+    </body>
 </html>
