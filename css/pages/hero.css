@@ -1,0 +1,35 @@
+/* ================== Hero Section ================== */
+
+.hero {
+  height: calc(100vh - 60px);
+  width: 100%;
+  background-image: url('/images/backgrounds/bg-image2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  padding: var(--nav-height);
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+
+.btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: var(--font-md);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.btn-primary:hover {
+  background-color: #f0f0f0;
+}

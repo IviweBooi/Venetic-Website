@@ -1,0 +1,55 @@
+:root {
+  /* Colors */
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* Theme colors */
+  --color-bg: var(--color-black);
+  --color-text: var(--color-white);
+  --color-button-bg: var(--color-white);
+  --color-button-text: var(--color-black);
+  --color-button-border: var(--color-white);
+
+  /* Fonts */
+  --font-primary: "Inter Tight", sans-serif;
+  --font-heading: "Bebas Neue", sans-serif;
+
+  /* Font sizes */
+  --font-sm: 12px;
+  --font-md: 14px;
+  --font-lg: 24px;
+
+  /* Spacing */
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Layout */
+  --nav-height: 80px;
+  --container-width: 1200px;
+
+  /* Borders */
+  --border-width: 2px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+}
+
+/* For white/light sections */
+.light-section {
+  --color-bg: var(--color-white);
+  --color-text: var(--color-black);
+  --color-button-bg: var(--color-black);
+  --color-button-text: var(--color-white);
+  --color-button-border: var(--color-black);
+}
+
+/* For black/dark sections */
+.dark-section {
+  --color-bg: var(--color-black);
+  --color-text: var(--color-white);
+  --color-button-bg: var(--color-white);
+  --color-button-text: var(--color-black);
+  --color-button-border: var(--color-white);
+}

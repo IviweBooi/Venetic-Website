@@ -1,0 +1,31 @@
+/* ================== Fonts ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ================== Reset ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================== Base ==================== */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* ================== Typography ==================== */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+}
+
+h1 { font-size: var(--font-xl, 48px); }
+h2 { font-size: var(--font-lg, 32px); }
+h3 { font-size: var(--font-md, 24px); }
+
+p {
+  font-size: var(--font-base, 16px);
+}
