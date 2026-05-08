@@ -210,6 +210,8 @@ nav {
   margin-top: var(--space-xl);
   width: 100%;
   padding: 0 var(--space-xl);
+  display: flex;
+  align-items: center;
 }
 
 .mobile-cta .btn {
@@ -220,6 +222,7 @@ nav {
   color: var(--color-button-text);
   font-weight: 500;
   font-family: var(--font-primary);
+  margin: 0 auto;
 }
 
 /* ================== Scrolling Ticker ================== */
