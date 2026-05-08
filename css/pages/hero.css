@@ -4,7 +4,7 @@
   height: calc(100vh - 60px);
   width: 100%;
   background-color: var(--color-black);
-  background-image: url('../../images/backgrounds/bg-image2.png');
+  background-image: url("../../images/backgrounds/bg-image2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    background-image: url('../../images/backgrounds/bg-image-mobile.png');
+    background-image: url("../../images/backgrounds/bg-image-mobile.png");
     background-position: center center;
     background-size: cover;
   }
@@ -33,7 +33,6 @@
   justify-content: center;
 }
 
-
 .btn-primary {
   background-color: var(--color-white);
   color: var(--color-black);
@@ -41,6 +40,8 @@
   text-transform: uppercase;
   font-weight: 400;
   margin-top: 345px;
+  border-top: 5px solid var(--gold);
+  border-bottom: 5px solid var(--deep-blue);
 }
 
 .btn-primary:hover {

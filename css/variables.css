@@ -2,6 +2,8 @@
   /* Colors */
   --color-black: #000000;
   --color-white: #ffffff;
+  --gold: #FE9502;
+  --deep-blue: oklch(45.466% 0.17819 260.057);
 
   /* Theme colors */
   --color-bg: var(--color-black);
