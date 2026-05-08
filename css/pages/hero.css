@@ -40,8 +40,6 @@
   text-transform: uppercase;
   font-weight: 400;
   margin-top: 345px;
-  border-top: 5px solid var(--gold);
-  border-bottom: 5px solid var(--deep-blue);
 }
 
 .btn-primary:hover {
