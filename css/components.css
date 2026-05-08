@@ -34,7 +34,7 @@ nav {
   position: fixed;
   top: 0;
   padding: 0 var(--space-xl);
-  background-color:rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   z-index: 1000;
   display: flex;
@@ -50,7 +50,6 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-
 
 .logo-image {
   max-height: var(--nav-height);
@@ -128,8 +127,14 @@ nav {
   transition: all var(--transition-fast);
 }
 
-.hamburger::before { top: -8px; left: 0; }
-.hamburger::after { top: 8px; left: 0; }
+.hamburger::before {
+  top: -8px;
+  left: 0;
+}
+.hamburger::after {
+  top: 8px;
+  left: 0;
+}
 
 /* Hamburger to X Animation */
 .menu-toggle.active .hamburger {
@@ -188,14 +193,30 @@ nav {
 }
 
 /* Staggered animation for links */
-.mobile-nav-overlay.active li:nth-child(1) { transition-delay: 0.1s; }
-.mobile-nav-overlay.active li:nth-child(2) { transition-delay: 0.15s; }
-.mobile-nav-overlay.active li:nth-child(3) { transition-delay: 0.2s; }
-.mobile-nav-overlay.active li:nth-child(4) { transition-delay: 0.25s; }
-.mobile-nav-overlay.active li:nth-child(5) { transition-delay: 0.3s; }
-.mobile-nav-overlay.active li:nth-child(6) { transition-delay: 0.35s; }
-.mobile-nav-overlay.active li:nth-child(7) { transition-delay: 0.4s; }
-.mobile-nav-overlay.active li:nth-child(8) { transition-delay: 0.45s; }
+.mobile-nav-overlay.active li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.mobile-nav-overlay.active li:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.mobile-nav-overlay.active li:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.mobile-nav-overlay.active li:nth-child(4) {
+  transition-delay: 0.25s;
+}
+.mobile-nav-overlay.active li:nth-child(5) {
+  transition-delay: 0.3s;
+}
+.mobile-nav-overlay.active li:nth-child(6) {
+  transition-delay: 0.35s;
+}
+.mobile-nav-overlay.active li:nth-child(7) {
+  transition-delay: 0.4s;
+}
+.mobile-nav-overlay.active li:nth-child(8) {
+  transition-delay: 0.45s;
+}
 
 .mobile-nav-links a {
   text-decoration: none;
@@ -237,8 +258,20 @@ nav {
   overflow: hidden;
   z-index: 100;
   /* Mask to create the blurry gradient fade on edges */
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
 }
 
 .ticker-content {
@@ -280,7 +313,7 @@ nav {
   :root {
     --space-xl: 24px;
   }
-  
+
   .nav-container {
     padding: 0 var(--space-md);
   }
@@ -304,7 +337,8 @@ nav {
     padding: 0 var(--space-md);
   }
 
-  .nav-links, .nav-cta {
+  .nav-links,
+  .nav-cta {
     display: none; /* Hide desktop links and CTA */
   }
 
@@ -325,6 +359,13 @@ nav {
 }
 
 @media (max-width: 480px) {
+  nav {
+    height: 60px;
+  }
+
+  .logo-image {
+    max-height: 60px;
+  }
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -355,4 +396,3 @@ nav {
     justify-content: center;
   }
 }
-
