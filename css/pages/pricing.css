@@ -95,12 +95,12 @@
   margin-top: auto;
 }
 
-.btn-primary {
+.pricing-card .btn-primary {
   background-color: var(--color-black);
   color: var(--color-white);
 }
 
-.btn-secondary {
+.pricing-card .btn-secondary {
   background-color: var(--color-white);
   color: var(--color-black);
 }
