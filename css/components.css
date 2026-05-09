@@ -161,8 +161,10 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  padding-top: var(--nav-height);
   height: 100vh;
-  background-color: var(--color-black);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(25px);
   z-index: 1500;
   display: flex;
   align-items: stretch;
@@ -184,10 +186,12 @@ nav {
 }
 
 .mobile-nav-links li {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-sm);
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.4s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: var(--space-sm) 0;
 }
 
 .mobile-nav-overlay.active .mobile-nav-links li {
@@ -224,7 +228,8 @@ nav {
 .mobile-nav-links a {
   text-decoration: none;
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-weight: 300;
+  font-size: 20px;
   color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 4px;
