@@ -7,7 +7,10 @@
     <!-- Preload Hero Image for faster loading -->
     <link rel="preload" as="image" href="images/backgrounds/bg-image2.png" />
     <!-- import styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -16,7 +19,11 @@
         <!-- Logo -->
         <div class="logo">
           <a href="#" aria-label="Venetic logo">
-            <img src="images/logo/Venetic  logo.png" alt="Venetic logo" class="logo-image" />
+            <img
+              src="images/logo/Venetic  logo.png"
+              alt="Venetic logo"
+              class="logo-image"
+            />
           </a>
         </div>
 
@@ -79,22 +86,32 @@
       <div class="ticker-container">
         <div class="ticker-content">
           <div class="ticker-set">
-            <span>Venetic Boards & Interiors: Crafting Bespoke Cabinetry and Premium Interior Solutions.</span>
+            <span
+              >Venetic Boards & Interiors: Crafting Bespoke Cabinetry and
+              Premium Interior Solutions.</span
+            >
             <span>•</span>
             <span>Elevate your space with expert craftsmanship.</span>
             <span>•</span>
-            <span>From concept to installation, we bring your vision to life.</span>
+            <span
+              >From concept to installation, we bring your vision to life.</span
+            >
             <span>•</span>
             <span>Quality materials, timeless designs.</span>
             <span>•</span>
             <span>Your dream home starts here.</span>
           </div>
           <div class="ticker-set">
-            <span>Venetic Boards & Interiors: Crafting Bespoke Cabinetry and Premium Interior Solutions.</span>
+            <span
+              >Venetic Boards & Interiors: Crafting Bespoke Cabinetry and
+              Premium Interior Solutions.</span
+            >
             <span>•</span>
             <span>Elevate your space with expert craftsmanship.</span>
             <span>•</span>
-            <span>From concept to installation, we bring your vision to life.</span>
+            <span
+              >From concept to installation, we bring your vision to life.</span
+            >
             <span>•</span>
             <span>Quality materials, timeless designs.</span>
             <span>•</span>
@@ -103,27 +120,115 @@
         </div>
       </div>
     </header>
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="services-container">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">Our Services</h2>
 
-      <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const mobileNav = document.querySelector('.mobile-nav-overlay');
-        const body = document.body;
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-image-wrapper">
+              <img
+                src="images/services/kitchen.png"
+                alt="Kitchen Installations"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Kitchen Installations</h3>
+              <p>
+                Complete custom kitchen design and installation - from modern
+                minimalist to classic elegance.
+              </p>
+            </div>
+          </div>
 
-        menuToggle.addEventListener('click', () => {
-          menuToggle.classList.toggle('active');
-          mobileNav.classList.toggle('active');
-          body.classList.toggle('menu-open');
+          <div class="service-card">
+            <div class="service-image-wrapper">
+              <img src="images/services/wardrobe.png" alt="Wardrobes" />
+            </div>
+            <div class="service-content">
+              <h3>Wardrobes (BICs)</h3>
+              <p>
+                Built-in cupboards tailored to your space, maximising storage
+                with sleek, modern finishes.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image-wrapper">
+              <img src="images/services/tv-unit.png" alt="TV Units" />
+            </div>
+            <div class="service-content">
+              <h3>TV Units</h3>
+              <p>
+                Floating and freestanding TV units designed to complement your
+                living space perfectly.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image-wrapper">
+              <img src="images/services/office-desk.png" alt="Office Desks" />
+            </div>
+            <div class="service-content">
+              <h3>Office Desks</h3>
+              <p>
+                Functional, modern workspace solutions for home offices and
+                commercial spaces.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image-wrapper">
+              <img
+                src="images/services/board-cutting.png"
+                alt="Board Cutting and Edging"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Board Cutting & Edging</h3>
+              <p>
+                Precision board cutting and professional edge banding for trade
+                and DIY customers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-footer-cta">
+          <h3 class="footer-cta-heading">Ready to transform your space?</h3>
+          <a href="#" id="services-cta" class="btn btn-primary">
+            Get a Quote
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mobileNav = document.querySelector(".mobile-nav-overlay");
+      const body = document.body;
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+        body.classList.toggle("menu-open");
+      });
+
+      // Close menu when clicking a link
+      const mobileLinks = document.querySelectorAll(".mobile-nav-links a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.classList.remove("active");
+          mobileNav.classList.remove("active");
+          body.classList.remove("menu-open");
         });
-
-        // Close menu when clicking a link
-        const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            mobileNav.classList.remove('active');
-            body.classList.remove('menu-open');
-          });
-        });
-      </script>
-    </body>
+      });
+    </script>
+  </body>
 </html>

@@ -3,7 +3,7 @@
   --color-black: #000000;
   --color-white: #ffffff;
   --gold: #FE9502;
-  --deep-blue: oklch(45.466% 0.17819 260.057);
+  --deep-blue: oklch(50.947% 0.13595 250.723);
 
   /* Theme colors */
   --color-bg: var(--color-black);
@@ -14,7 +14,7 @@
 
   /* Fonts */
   --font-primary: "Inter Tight", sans-serif;
-  --font-heading: "Bebas Neue", sans-serif;
+  --font-heading: "Poppins", sans-serif;
 
   /* Font sizes */
   --font-sm: 12px;
