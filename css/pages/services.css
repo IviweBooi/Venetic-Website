@@ -132,4 +132,13 @@
     font-size: 36px;
     margin-bottom: 40px;
   }
+
+  .services-footer-cta {
+    align-items: stretch;
+  }
+
+  #services-cta {
+    display: block;
+    text-align: center;
+  }
 }
