@@ -29,7 +29,7 @@
 .services-intro {
   font-size: 14px;
   font-weight: 300;
-  color: var(--color-muted, #000000);
+  color: rgb(153, 153, 153);
   margin-bottom: 64px;
   max-width: 600px;
   line-height: 1.6;
