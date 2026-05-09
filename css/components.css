@@ -36,7 +36,7 @@ nav {
   padding: 0 var(--space-xl);
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
-  z-index: 1000;
+  z-index: 2000; /* Increased to be above the mobile overlay */
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -124,10 +124,11 @@ nav {
 .hamburger::after {
   content: "";
   position: absolute;
-  width: 24px;
+  width: 100%; /* Ensures it matches the parent .hamburger width exactly */
   height: 2px;
   background-color: var(--color-white);
   transition: all var(--transition-fast);
+  left: 0;
 }
 
 .hamburger::before {
@@ -161,7 +162,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: var(--nav-height);
+  padding: var(--nav-height) 20px;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(25px);
