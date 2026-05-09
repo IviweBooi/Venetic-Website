@@ -54,8 +54,17 @@
 
 .about-icon {
   margin-bottom: 16px;
-  font-size: 24px;
   color: var(--dark-gold);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 32px; /* Increased for SVG icons */
+}
+
+.about-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
 }
 
 .about-card h3 {
