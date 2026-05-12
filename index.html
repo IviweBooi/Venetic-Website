@@ -13,6 +13,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <!-- Leaflet CSS for potential map integration -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -623,6 +629,81 @@
         </div>
       </div>
     </section>
+    <!-- contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-content">
+          <p class="section-label">Get In Touch</p>
+          <h2 class="section-title">Request a Quote</h2>
+
+          <p class="contact-text">
+            Ready to start your project? Send us your details and we’ll get back
+            to you with the next steps.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <p>+27 00 000 0000</p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <p>+27 00 000 0000</p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>
+                Unit 211 C/O Hammer & Spanner Crescent,<br />
+                Teguka Business Park,<br />
+                Philippi East 7750
+              </p>
+            </div>
+
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <input type="text" name="name" placeholder="Full Name" required />
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone / WhatsApp Number"
+            required
+          />
+
+          <input type="email" name="email" placeholder="Email Address" />
+
+          <select name="service" required>
+            <option value="">Select Service</option>
+            <option value="kitchen">Kitchen Installation</option>
+            <option value="wardrobe">Wardrobes / BICs</option>
+            <option value="tv-unit">TV Unit</option>
+            <option value="office-desk">Office Desk</option>
+            <option value="board-cutting">Board Cutting & Edging</option>
+            <option value="custom">Custom Project</option>
+          </select>
+
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Tell us about your project"
+          ></textarea>
+
+          <button type="submit" class="btn btn-white">Send Request</button>
+        </form>
+      </div>
+      <div class="map-wrapper">
+        <div id="map"></div>
+      </div>
+    </section>
 
     <script>
       const menuToggle = document.querySelector(".menu-toggle");
@@ -644,6 +725,39 @@
           body.classList.remove("menu-open");
         });
       });
+    </script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      const map = L.map("map").setView([-33.9985, 18.5847], 14);
+
+      const streetMap = L.tileLayer(
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+          attribution: "&copy; OpenStreetMap contributors",
+        },
+      );
+
+      const satelliteMap = L.tileLayer(
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        {
+          attribution:
+            "Tiles &copy; Esri, Maxar, Earthstar Geographics, and the GIS User Community",
+        },
+      );
+
+      streetMap.addTo(map);
+
+      L.control.layers({
+        "Street map": streetMap,
+        "Satellite view": satelliteMap,
+      }).addTo(map);
+
+      L.marker([-33.9985, 18.5847])
+        .addTo(map)
+        .bindPopup(
+          "Venetic Boards & Interiors<br>Unit 211 C/O Hammer & Spanner Crescent,<br>Teguka Business Park,<br>Philippi East 7750",
+        )
+        .openPopup();
     </script>
   </body>
 </html>
