@@ -9,11 +9,20 @@
 }
 
 /* ================== Base ==================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 24px);
+}
+
 body {
   font-family: var(--font-primary);
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.5;
+}
+
+[id] {
+  scroll-margin-top: calc(var(--nav-height) + 24px);
 }
 
 body.menu-open {
@@ -32,4 +41,10 @@ h3 { font-size: var(--font-md, 24px); }
 
 p {
   font-size: var(--font-base, 16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

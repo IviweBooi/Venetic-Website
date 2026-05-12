@@ -21,12 +21,12 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
+  <body id="home">
     <nav>
       <div class="nav-container">
         <!-- Logo -->
         <div class="logo">
-          <a href="#" aria-label="Venetic logo">
+          <a href="#home" aria-label="Venetic logo">
             <img
               src="images/logo/Venetic  logo.png"
               alt="Venetic logo"
@@ -37,18 +37,18 @@
 
         <!-- Navigation Links -->
         <ul class="nav-links">
-          <li><a href="#">Services</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Process</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
 
         <!-- CTA Button -->
         <div class="nav-cta">
-          <a href="#" class="btn">
+          <a href="#contact" class="btn">
             Get a Quote
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -64,15 +64,15 @@
     <!-- Mobile Navigation Overlay -->
     <div class="mobile-nav-overlay">
       <ul class="mobile-nav-links">
-        <li><a href="#">Services</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Process</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li class="mobile-cta">
-          <a href="#" class="btn btn-primary">
+          <a href="#contact" class="btn btn-primary">
             Get a Quote
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -83,7 +83,7 @@
     <header class="hero">
       <div class="hero-content">
         <div class="hero-actions">
-          <a href="#" class="btn btn-primary">
+          <a href="#gallery" class="btn btn-primary">
             Explore Our Work
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -209,7 +209,7 @@
 
         <div class="services-footer-cta">
           <h3 class="footer-cta-heading">Ready to transform your space?</h3>
-          <a href="#" id="services-cta" class="btn btn-primary">
+          <a href="#contact" id="services-cta" class="btn btn-primary">
             Get a Quote
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -331,7 +331,7 @@
         </div>
 
         <div class="about-footer-cta">
-          <a href="#" class="btn btn-primary">
+          <a href="#gallery" class="btn btn-primary">
             Explore Our Work
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -662,9 +662,15 @@
             </div>
 
             <div class="social-links">
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#" data-pending-url aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" data-pending-url aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" data-pending-url aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -717,10 +723,18 @@
             </p>
 
             <div class="footer-socials">
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="#" data-pending-url aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" data-pending-url aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" data-pending-url aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+              <a href="#" data-pending-url aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
             </div>
           </div>
 
@@ -761,61 +775,9 @@
       </div>
     </footer>
 
-    <script>
-      const menuToggle = document.querySelector(".menu-toggle");
-      const mobileNav = document.querySelector(".mobile-nav-overlay");
-      const body = document.body;
-
-      menuToggle.addEventListener("click", () => {
-        menuToggle.classList.toggle("active");
-        mobileNav.classList.toggle("active");
-        body.classList.toggle("menu-open");
-      });
-
-      // Close menu when clicking a link
-      const mobileLinks = document.querySelectorAll(".mobile-nav-links a");
-      mobileLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          menuToggle.classList.remove("active");
-          mobileNav.classList.remove("active");
-          body.classList.remove("menu-open");
-        });
-      });
-    </script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-      const map = L.map("map").setView([-33.9985, 18.5847], 14);
-
-      const streetMap = L.tileLayer(
-        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-          attribution: "&copy; OpenStreetMap contributors",
-        },
-      );
-
-      const satelliteMap = L.tileLayer(
-        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-        {
-          attribution:
-            "Tiles &copy; Esri, Maxar, Earthstar Geographics, and the GIS User Community",
-        },
-      );
-
-      streetMap.addTo(map);
-
-      L.control
-        .layers({
-          "Street map": streetMap,
-          "Satellite view": satelliteMap,
-        })
-        .addTo(map);
-
-      L.marker([-33.9985, 18.5847])
-        .addTo(map)
-        .bindPopup(
-          "Venetic Boards & Interiors<br>Unit 211 C/O Hammer & Spanner Crescent,<br>Teguka Business Park,<br>Philippi East 7750",
-        )
-        .openPopup();
-    </script>
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/contact-form.js"></script>
+    <script src="js/components/map.js"></script>
   </body>
 </html>
