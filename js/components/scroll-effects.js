@@ -24,13 +24,14 @@ if ("IntersectionObserver" in window) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove("is-visible");
         }
       });
     },
     {
-      rootMargin: "0px 0px -12% 0px",
-      threshold: 0.16,
+      rootMargin: "0px 0px -8% 0px",
+      threshold: 0.01,
     },
   );
 
