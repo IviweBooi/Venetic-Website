@@ -52,6 +52,17 @@
   color: #d8d8d8;
 }
 
+.contact-item a,
+.contact-item a[x-apple-data-detectors],
+.contact-item p a {
+  color: inherit !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  text-decoration: none !important;
+}
+
 /* Social links */
 
 .social-links {

@@ -704,6 +704,62 @@
         <div id="map"></div>
       </div>
     </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h2>Venetic</h2>
+
+            <p>
+              Modern boards and interior solutions crafted with precision,
+              functionality, and style.
+            </p>
+
+            <div class="footer-socials">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Navigation</h3>
+
+            <ul>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#faqs">FAQs</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact</h3>
+
+            <p>
+              Unit 211 C/O Hammer & Spanner Crescent,<br />
+              Teguka Business Park,<br />
+              Philippi East 7750
+            </p>
+
+            <p>+27 00 000 0000</p>
+
+            <p>info@venetic.co.za</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Venetic Boards & Interiors. All rights reserved.</p>
+
+          <p>Designed with precision in Cape Town.</p>
+        </div>
+      </div>
+    </footer>
 
     <script>
       const menuToggle = document.querySelector(".menu-toggle");
@@ -747,10 +803,12 @@
 
       streetMap.addTo(map);
 
-      L.control.layers({
-        "Street map": streetMap,
-        "Satellite view": satelliteMap,
-      }).addTo(map);
+      L.control
+        .layers({
+          "Street map": streetMap,
+          "Satellite view": satelliteMap,
+        })
+        .addTo(map);
 
       L.marker([-33.9985, 18.5847])
         .addTo(map)
