@@ -22,6 +22,6 @@ Project details:
 ${message}`,
     );
 
-    window.location.href = `mailto:info@venetic.co.za?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@veneticboardsandinteriors.co.za?subject=${subject}&body=${body}`;
   });
 }

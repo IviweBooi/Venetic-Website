@@ -1,7 +1,11 @@
 const mapElement = document.querySelector("#map");
 
 if (mapElement && window.L) {
-  const map = L.map("map").setView([-33.9985, 18.5847], 14);
+  const businessLocation = [-33.9985, 18.5847];
+  const businessAddress =
+    "TEGUKA BUSINESS PARK, TEGUKA Business Park,<br>c/o Hammer & Spanner Cres,<br>Philippi, Cape Town, 7785";
+
+  const map = L.map("map").setView(businessLocation, 16);
 
   const streetMap = L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -27,10 +31,8 @@ if (mapElement && window.L) {
     })
     .addTo(map);
 
-  L.marker([-33.9985, 18.5847])
+  L.marker(businessLocation)
     .addTo(map)
-    .bindPopup(
-      "Venetic Boards & Interiors<br>Unit 211 C/O Hammer & Spanner Crescent,<br>Teguka Business Park,<br>Philippi East 7750",
-    )
+    .bindPopup(`Venetic Boards & Interiors<br>${businessAddress}`)
     .openPopup();
 }
