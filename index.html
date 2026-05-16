@@ -465,113 +465,96 @@
     </section>
 
     <!-- gallery Section -->
-    <section id="gallery" class="gallery-section">
-      <div class="gallery-header">
-        <p class="section-label">Our Work</p>
-        <h2 class="section-title">Gallery</h2>
-      </div>
+<section id="gallery" class="gallery-section">
+  <div class="gallery-header">
+    <p class="section-label">Our Work</p>
+    <h2 class="section-title">Gallery</h2>
+  </div>
 
-      <ul class="photo-gallery">
-        <li>
-          <img
-            src="images/contents/image-1.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+  <div class="gallery-fade" aria-label="Project gallery slideshow">
+
+    <div class="gallery-fade-container">
+      <ul class="gallery-track">
+
+        <li class="gallery-slide active">
+          <img src="images/contents/image-1.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-2.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-2.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-3.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-3.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-4.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-4.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-5.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+         <img src="images/contents/image-5.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-6.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-6.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-7.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-7.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-8.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-8.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-9.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-9.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-10.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-10.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-11.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-11.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-12.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-12.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-13.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-13.jpeg" alt="">
         </li>
-        <li>
-          <img
-            src="images/contents/image-14.jpeg"
-            alt="Gallery image"
-            loading="lazy"
-          />
+
+        <li class="gallery-slide">
+          <img src="images/contents/image-14.jpeg" alt=""> 
         </li>
+
       </ul>
-    </section>
+    </div>
+
+    <button
+      class="gallery-btn gallery-btn-prev"
+      type="button"
+      aria-label="Previous gallery image"
+    >
+      <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    </button>
+
+    <button
+      class="gallery-btn gallery-btn-next"
+      type="button"
+      aria-label="Next gallery image"
+    >
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
+
+    <div class="gallery-dots" aria-label="Gallery slide controls"></div>
+
+  </div>
+</section>
     <!-- faq Section -->
     <section id="faqs" class="faq-section light-section">
       <div class="faq-container">
@@ -801,5 +784,7 @@
     <script src="js/components/contact-form.js"></script>
     <script src="js/components/map.js"></script>
     <script src="js/components/scroll-effects.js"></script>
+    <script src="js/components/gallery-slider.js" defer></script>
+``
   </body>
 </html>
